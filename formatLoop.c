@@ -5,13 +5,15 @@
  * @format: The format string
  * @args: List of arguments
  * @pchar: Pointer to the character count
+ *
+ * Return: pchar
  */
 int formatLoop(const char *format, va_list args, int *pchar)
 {
 	FormatHandlerInfo formatHandlers[] = {
 		{'c', handleChar}, {'s', handleString}, {'d', handleInt}, {'i', handleInt}};
 	void (*handler)(va_list, int *) = NULL;
-	long unsigned int i;
+	unsigned long int i;
 	int ret = *pchar;
 
 	while (*format)
