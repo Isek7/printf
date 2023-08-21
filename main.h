@@ -29,7 +29,7 @@ struct formatHandler
 /**
  * FormatHandlerInfo - Typedef for formatHandler
  */
-typedef formatHandler FormatHandlerInfo;
+typedef struct formatHandler FormatHandlerInfo;
 
 void handleChar(va_list args, int *pchar);
 void handleString(va_list args, int *pchar);
