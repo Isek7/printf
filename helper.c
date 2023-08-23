@@ -43,9 +43,8 @@ int print_int(int num)
 	if (num == INT_MIN)
 	{
 		write(1, "-2147483648", 11);
-		return 11;
+		return (11);
 	}
-	
 	if (num == 0)
 	{
 		buffer[len++] = '0';
@@ -66,19 +65,15 @@ int print_int(int num)
 			abs_num /= 10;
 			num_digits++;
 		}
-
 		abs_num = num;
 		for (i = num_digits - 1; i >= 0; i--)
 		{
 			buffer[len + i] = '0' + (abs_num % 10);
 			abs_num /= 10;
 		}
-
 		len += num_digits;
 	}
-
 	write(1, buffer, len);
-
 	return (len);
 }
 
