@@ -42,10 +42,10 @@ int formatLoop(const char *format, va_list args, int *pchar)
 				if (handler)
 					handler(args, pchar);
 				else
-					handle_Char((char *)format, ret);
+					handle_Char((char *)format, pchar);
 			}
 			else
-				handle_perc(ret);
+				handle_perc(&ret);
 		}
 		format++;
 	}

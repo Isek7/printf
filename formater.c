@@ -31,12 +31,12 @@ void handleHexUpper(va_list args, int *pchar)
  *
  *Return: Nothing
  */
-void handle_Char(char *c, int ret)
+void handle_Char(char *c, int *ret)
 {
 	write(1, "%", 1);
-	ret++;
+	ret += 1;
 	write(1, c, 1);
-	ret++;
+	ret += 1;
 }
 
 /**
@@ -45,8 +45,8 @@ void handle_Char(char *c, int ret)
  *
  *Return: Nothing
  */
-void handle_perc(int ret)
+void handle_perc(int *ret)
 {
 	write(1, "%", 1);
-	ret++;
+	*ret += 1;
 }
