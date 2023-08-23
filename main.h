@@ -8,7 +8,8 @@
 
 #define UNUSED(x) (void)(x)
 
-
+void handle_perc(int ret);
+void handle_Char(char *c, int ret);
 int print_int(int num);
 int _printf(const char *format, ...);
 int print_str(char *s);

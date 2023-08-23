@@ -24,4 +24,29 @@ void handleHexUpper(va_list args, int *pchar)
 	*pchar += print_hex(num, 1);
 }
 
+/**
+ *handle_Char - Handles printing of char
+ *@c: char
+ *@ret: Pointer to number of characters printed
+ *
+ *Return: Nothing
+ */
+void handle_Char(char *c, int ret)
+{
+	write(1, "%", 1);
+	ret++;
+	write(1, c, 1);
+	ret++;
+}
 
+/**
+ *handle_perc - Handles printing of char
+ *@ret: Pointer to number of characters printed
+ *
+ *Return: Nothing
+ */
+void handle_perc(int ret)
+{
+	write(1, "%", 1);
+	ret++;
+}

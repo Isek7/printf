@@ -29,7 +29,6 @@ int formatLoop(const char *format, va_list args, int *pchar)
 			{
 				return (-1);
 			}
-						
 			if (*format != '%')
 			{
 				for (i = 0; i < sizeof(formatHandlers) / sizeof(formatHandlers[0]); i++)
@@ -43,20 +42,10 @@ int formatLoop(const char *format, va_list args, int *pchar)
 				if (handler)
 					handler(args, pchar);
 				else
-				{
-					write(1, "%", 1);
-					ret++;
-					write(1, format, 1);
-					ret++;
-					
-				}
+					handle_Char((char *)format, ret);
 			}
 			else
-			{
-				write(1, "%", 1);
-				ret++;
-			}
-
+				handle_perc(ret);
 		}
 		format++;
 	}
