@@ -23,3 +23,5 @@ void handleHexUpper(va_list args, int *pchar)
 	unsigned int num = va_arg(args, unsigned int);
 	*pchar += print_hex(num, 1);
 }
+
+
