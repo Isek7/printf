@@ -61,11 +61,11 @@ void handleCustomString(va_list args, int *pchar)
 		/* Print non-printable character as \xXX (uppercase hexadecimal)*/
 
 		write(1, "\\x", 2);
-		if (str[i] < 16)
+		/*if (str[i] < 16)
 		{
 			write(1, "0", 1);
 			*pchar += 1;
-		}
+		}*/
 		print_hex((unsigned int)str[i], 1);
 		*pchar += 4;
 	}
@@ -75,6 +75,8 @@ void handleCustomString(va_list args, int *pchar)
 		(*pchar)++;
 	}
 	}
+	/*write(1, '\0', 1);
+	(*pchar)++;*/
 }
 
 
