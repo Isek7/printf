@@ -40,6 +40,12 @@ int print_int(int num)
 	int abs_num, i;
 	int num_digits = 0;
 
+	if (num == INT_MIN)
+	{
+		write(1, "-2147483648", 11);
+		return 11;
+	}
+	
 	if (num == 0)
 	{
 		buffer[len++] = '0';
