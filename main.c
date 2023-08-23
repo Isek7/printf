@@ -11,12 +11,12 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("%!\n");
-	len2 = printf("%!\n");
+	len = _printf("%K\n");
+	len2 = printf("%K\n");
 	fflush(stdout);
 	if (len != len2)
 	{
-		printf("Lengths differ. %d %d\n", len, len2);
+		printf("Lengths differ.\n");
 		fflush(stdout);
 		return (1);
 	}

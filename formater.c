@@ -34,9 +34,9 @@ void handleHexUpper(va_list args, int *pchar)
 void handle_Char(char *c, int *ret)
 {
 	write(1, "%", 1);
-	ret += 1;
+	*ret += 1;
 	write(1, c, 1);
-	ret += 1;
+	*ret += 1;
 }
 
 /**
